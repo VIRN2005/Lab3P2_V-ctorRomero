@@ -149,7 +149,109 @@ public class Lab3P2VíctorRomero {
                 break;
 
                 case 3: {
+                    System.out.println(">> MENU VEHICULO <<");
+                    System.out.println("----------------------- ");
 
+                    System.out.println("1 -> Agregar");
+                    System.out.println("2 -> Modificar Vehiculo");
+                    System.out.println("3 -> Eliminar");
+
+                    System.out.print("Ingrese su Opcion: ");
+                    int car = leer.nextInt();
+                    System.out.println("=> La Opcion escojida es: " + car);
+                    System.out.println(" ");
+
+                    switch (car) {
+                        case 1: {// Agregar
+                            vehiculos.add(newVehiculos());
+                        }
+                        break;
+
+                        case 2: {//Modificar
+                            String chain = "";
+                            for (Object o : vehiculos) {
+                                chain += vehiculos.indexOf(o) + "- " + o + "\n";
+                            }
+                            System.out.println(chain);
+
+                            System.out.println(">> Ingrese el Indice a Modificar");
+                            int pos = leer.nextInt();
+
+                            int option = 0;
+
+                            if (pos >= 0 && pos <= vehiculos.size() - 1) {
+                                if (vehiculos.get(pos) instanceof Vehiculos) {
+                                    String chain1 = "";
+                                    for (Object o : concesionaria) {
+                                        chain1 += concesionaria.indexOf(o) + "- " + o + "\n";
+                                    }
+                                    System.out.println(chain1);
+
+                                    System.out.println(">> Ingrese el Indice a Modificar en Consecionaria");
+                                    int pos1 = leer.nextInt();
+
+                                    System.out.println(">> Ingrese el Indice a Modificar del Vehiculo");
+                                    int veh = leer.nextInt();
+
+                                    if (concesionaria.get(pos1).getVehiculos().get(veh) instanceof Carro) {
+                                        option = 1;
+                                    }
+
+                                    if (concesionaria.get(pos1).getVehiculos().get(veh) instanceof Camion) {
+                                        option = 2;
+                                    }
+
+                                    if (concesionaria.get(pos1).getVehiculos().get(veh) instanceof Bus) {
+                                        option = 3;
+                                    }
+
+                                    if (concesionaria.get(pos1).getVehiculos().get(veh) instanceof Motocicleta) {
+                                        option = 4;
+                                    }
+
+                                    if (concesionaria.get(pos1).getVehiculos().get(veh) instanceof Bicicleta) {
+                                        option = 5;
+                                    }
+
+                                    switch (option) {
+                                        case 1: { // Carro
+                                            System.out.println("");
+//                                            ((Carro) vehiculos.get(pos)).get 
+                                        }
+                                        break;
+
+                                    }
+
+                                } else {
+                                    System.out.println("Indice no valido");
+                                }
+                            }
+
+                        }
+                        break;
+
+                        case 3: {// Eliminar
+                            String chain = "";
+                            for (Object o : vehiculos) {
+                                chain += vehiculos.indexOf(o) + "- " + o + "\n";
+                            }
+                            System.out.println(chain);
+
+                            System.out.println(">> Ingrese el Indice a Modificar");
+                            int pos = leer.nextInt();
+
+                            if (pos >= 0 && pos <= vehiculos.size()) {
+                                if (vehiculos.get(pos) instanceof Vehiculos) {
+
+                                    vehiculos.remove(pos);
+
+                                } else {
+                                    System.out.println("Indice no valido");
+                                }
+                            }
+                        }
+                        break;
+                    }
                 }
                 break;
 
@@ -160,6 +262,7 @@ public class Lab3P2VíctorRomero {
             }
 
         } while (opcion != 5);
+
     }
 
     static Concesionaria newCon() {
@@ -210,6 +313,41 @@ public class Lab3P2VíctorRomero {
         saldo = leer.nextDouble();
 
         retorno = new Clientes(id, name, vehiculosProp, saldo);
+        return retorno;
+    }
+
+    static Vehiculos newVehiculos() {
+        String color;
+        String marca;
+        String modelo;
+        int añoFab;
+        double precio;
+        int cantLlantas;
+
+        Vehiculos retorno;
+
+        leer.nextLine();
+        System.out.println(">> Ingrese el Color del Vehiculo: ");
+        color = leer.nextLine();
+
+        leer.nextLine();
+        System.out.println(">> Ingrese la Marca del Vehiculo: ");
+        marca = leer.nextLine();
+
+        leer.nextLine();
+        System.out.println(">> Ingrese el Modelo del Vehiculo: ");
+        modelo = leer.nextLine();
+
+        System.out.println(">> Ingrese el Year del Vehiculo: ");
+        añoFab = leer.nextInt();
+
+        System.out.println(">> Ingrese el Precio del Vehiculo:: ");
+        precio = leer.nextDouble();
+
+        System.out.println(">> Ingrese la cantidad de llantas del Vehiculo: ");
+        cantLlantas = leer.nextInt();
+
+        retorno = new Vehiculos(color, marca, modelo, añoFab, precio, cantLlantas);
         return retorno;
     }
 }
