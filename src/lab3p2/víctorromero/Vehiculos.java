@@ -3,7 +3,7 @@ package lab3p2.víctorromero;
 
 import java.awt.Color;
 
-public class Vehiculos {
+public class Vehiculos{
     
     protected String color;
     protected String marca;

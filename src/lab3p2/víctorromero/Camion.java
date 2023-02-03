@@ -1,6 +1,6 @@
 package lab3p2.víctorromero;
 
-public class Camion {
+public class Camion extends Vehiculos{
 
     private int volumenMax;
     private int altura;

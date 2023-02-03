@@ -1,6 +1,6 @@
 package lab3p2.víctorromero;
 
-public class Bus {
+public class Bus extends Vehiculos{
 
     private int cantPasajeros;
     private String tipoBus;
