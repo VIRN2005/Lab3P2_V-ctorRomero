@@ -9,7 +9,8 @@ public class Camion extends Vehiculos{
     public Camion() {
     }
 
-    public Camion(int volumenMax, int altura, boolean excavadora) {
+    public Camion(int volumenMax, int altura, boolean excavadora, String color, String marca, String modelo, int añoFab, double precio, int cantLlantas) {
+        super(color, marca, modelo, añoFab, precio, cantLlantas);
         this.volumenMax = volumenMax;
         this.altura = altura;
         this.excavadora = excavadora;

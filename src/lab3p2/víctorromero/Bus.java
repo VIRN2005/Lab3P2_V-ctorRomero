@@ -8,7 +8,8 @@ public class Bus extends Vehiculos{
     public Bus() {
     }
 
-    public Bus(int cantPasajeros) {
+    public Bus(int cantPasajeros, String tipoBus, String color, String marca, String modelo, int añoFab, double precio, int cantLlantas) {
+        super(color, marca, modelo, añoFab, precio, cantLlantas);
         this.cantPasajeros = cantPasajeros;
         if (cantPasajeros <= 50) {
             tipoBus = "Rapidito";

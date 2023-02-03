@@ -1,14 +1,16 @@
 package lab3p2.víctorromero;
 
-public class Motocicleta {
+public class Motocicleta extends Vehiculos{
 
     private String despMotor;
     private boolean electric;
 
     public Motocicleta() {
+        super();
     }
 
-    public Motocicleta(String despMotor, boolean electric) {
+    public Motocicleta(String despMotor, boolean electric, String color, String marca, String modelo, int añoFab, double precio, int cantLlantas) {
+        super(color, marca, modelo, añoFab, precio, cantLlantas);
         this.despMotor = despMotor;
         this.electric = electric;
     }

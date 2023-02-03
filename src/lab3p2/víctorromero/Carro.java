@@ -7,13 +7,16 @@ public class Carro extends Vehiculos{
     private int velocidadMax;
 
     public Carro() {
+        super();
     }
 
-    public Carro(int cantRuedas, String motor, int velocidadMax) {
+    public Carro(int cantRuedas, String motor, int velocidadMax, String color, String marca, String modelo, int añoFab, double precio, int cantLlantas) {
+        super(color, marca, modelo, añoFab, precio, cantLlantas);
         this.cantRuedas = cantRuedas;
         this.motor = motor;
         this.velocidadMax = velocidadMax;
     }
+
 
     public int getCantRuedas() {
         return cantRuedas;

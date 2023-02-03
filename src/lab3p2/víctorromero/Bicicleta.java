@@ -9,11 +9,13 @@ public class Bicicleta extends Vehiculos{
     public Bicicleta() {
     }
 
-    public Bicicleta(String descripcion, int rueda, boolean BMX) {
+    public Bicicleta(String descripcion, int rueda, boolean BMX, String color, String marca, String modelo, int añoFab, double precio, int cantLlantas) {
+        super(color, marca, modelo, añoFab, precio, cantLlantas);
         this.descripcion = descripcion;
         this.rueda = rueda;
         this.BMX = BMX;
     }
+
 
     public String getDescripcion() {
         return descripcion;
