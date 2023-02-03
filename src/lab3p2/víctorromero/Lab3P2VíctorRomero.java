@@ -215,8 +215,42 @@ public class Lab3P2VíctorRomero {
 
                                     switch (option) {
                                         case 1: { // Carro
-                                            System.out.println("");
-//                                            ((Carro) vehiculos.get(pos)).get 
+                                            System.out.println(">> MENU VEHICULO <<");
+                                            System.out.println("----------------------- ");
+
+                                            System.out.println("1 -> Cantidad de Ruedas");
+                                            System.out.println("2 -> Motor");
+                                            System.out.println("3 -> Velocidad Max");
+
+                                            System.out.print("Ingrese su Opcion: ");
+                                            int carro = leer.nextInt();
+                                            System.out.println("=> La Opcion escojida es: " + carro);
+                                            System.out.println(" ");
+
+                                            switch (carro) {
+                                                case 1: { // Cant Ruedas
+                                                    System.out.println(">> Ingrese cantidad de Llantas: ");
+                                                    int wheels = leer.nextInt();
+                                                    ((Carro) vehiculos.get(pos)).setCantRuedas(wheels);
+                                                }
+                                                break;
+                                                
+                                                case 2:{
+                                                    leer.nextLine();
+                                                    System.out.println(">> Ingrese Motor: ");
+                                                    String mot = leer.nextLine();
+                                                    ((Carro) vehiculos.get(pos)).setMotor(mot);
+                                                }
+                                                break;
+                                                
+                                                case 3:{
+                                                    System.out.println(">> Ingrese Velocidad Max: ");
+                                                    int max = leer.nextInt();
+                                                    ((Carro) vehiculos.get(pos)).setCantRuedas(max);
+                                                }
+                                                break;
+
+                                            }
                                         }
                                         break;
 
