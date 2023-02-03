@@ -6,6 +6,7 @@ public class Bus extends Vehiculos{
     private String tipoBus;
 
     public Bus() {
+        super();
     }
 
     public Bus(int cantPasajeros, String tipoBus, String color, String marca, String modelo, int añoFab, double precio, int cantLlantas) {

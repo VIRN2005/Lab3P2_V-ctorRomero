@@ -107,7 +107,44 @@ public class Lab3P2VíctorRomero {
                 break;
 
                 case 2: {
+                    System.out.println(">> MENU CLIENTE <<");
+                    System.out.println("----------------------- ");
 
+                    System.out.println("1 -> Agregar");
+                    System.out.println("2 -> Eliminar");
+
+                    System.out.print("Ingrese su Opcion: ");
+                    int client = leer.nextInt();
+                    System.out.println("=> La Opcion escojida es: " + client);
+                    System.out.println(" ");
+
+                    switch (client) {
+                        case 1: {// Agregar
+                            personas.add(newClientes());
+                        }
+                        break;
+
+                        case 2: {// Eliminar
+                            String chain = "";
+                            for (Object o : personas) {
+                                chain += personas.indexOf(o) + "- " + o + "\n";
+                            }
+                            System.out.println(chain);
+
+                            System.out.println(">> Ingrese el Indice a Modificar");
+                            int pos = leer.nextInt();
+
+                            if (pos >= 0 && pos <= personas.size()) {
+                                if (personas.get(pos) instanceof Clientes) {
+
+                                    personas.remove(pos);
+
+                                } else {
+                                    System.out.println("Indice no valido");
+                                }
+                            }
+                        }
+                    }
                 }
                 break;
 
@@ -154,4 +191,25 @@ public class Lab3P2VíctorRomero {
         return retorno;
     }
 
+    static Clientes newClientes() {
+        int id;
+        String name;
+        ArrayList<Vehiculos> vehiculosProp = new ArrayList();
+        double saldo;
+
+        Clientes retorno;
+
+        System.out.println(">> Ingrese el Nombre del Cliente: ");
+        id = leer.nextInt();
+
+        leer.nextLine();
+        System.out.println(">> Ingrese el Nombre del Cliente: ");
+        name = leer.nextLine();
+
+        System.out.println(">> Ingrese el Saldo del Cliente: ");
+        saldo = leer.nextDouble();
+
+        retorno = new Clientes(id, name, vehiculosProp, saldo);
+        return retorno;
+    }
 }
