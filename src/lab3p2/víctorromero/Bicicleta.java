@@ -1,6 +1,6 @@
 package lab3p2.víctorromero;
 
-public class Bicicleta {
+public class Bicicleta extends Vehiculos{
 
     private String descripcion;
     private int rueda;
