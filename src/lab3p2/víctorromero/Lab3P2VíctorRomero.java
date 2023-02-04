@@ -504,27 +504,41 @@ public class Lab3P2VíctorRomero {
 
                             System.out.println(">> Ingrese el Indice a Modificar");
                             int pos = leer.nextInt();
-                            
+
                             double moneyCliente = personas.get(pos).getSaldo();
                             double moneyInc = concesionaria.get(pos).getSaldo();
-                            
-                            
+
+                            double priceCar = vehiculos.get(pos).getPrecio();
+
+                            personas.get(pos).setSaldo(moneyCliente + priceCar);
+                            concesionaria.get(pos).setSaldo(moneyInc - priceCar);
+
+                            personas.get(pos).getVehiculosProp().remove(pos);
+                            vehiculos.remove(pos);
+
+                            System.out.println("EXCELENTE! VENTA REALIZADA");
                         }
+                        break;
                     }
 
                 }
-                while (opcion
-                        != 5);
-
+                break;
+                
+                case 5:{
+                    System.out.println("HA SALIDO DEL PROGRAMA");
+                    System.out.println("VUELVA PRONTOOOO!");
+                }
+                break;
+                
+                default:{
+                    System.out.println("ERROR 404");
+                    System.out.println("NUMERO INVALIDO!");
+                }
             }
+        } while (opcion
+                != 5);
 
-    
-
-    
-
-    
-
-    
+    }
 
     static Concesionaria newCon() {
         String nombreEmpresa;
