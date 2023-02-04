@@ -549,12 +549,11 @@ public class Lab3P2VíctorRomero {
         double saldo;
 
         Concesionaria retorno;
-
-        leer.nextLine();
+        
         System.out.println(">> Ingrese el Nombre de la Empresa: ");
         nombreEmpresa = leer.nextLine();
 
-        leer.nextLine();
+        leer.next();
         System.out.println(">> Ingrese el ID de la Empresa: ");
         ID_Empresa = leer.nextLine();
 
@@ -577,7 +576,7 @@ public class Lab3P2VíctorRomero {
 
         Clientes retorno;
 
-        System.out.println(">> Ingrese el Nombre del Cliente: ");
+        System.out.println(">> Ingrese el ID del Cliente: ");
         id = leer.nextInt();
 
         leer.nextLine();
@@ -600,16 +599,15 @@ public class Lab3P2VíctorRomero {
         int cantLlantas;
 
         Vehiculos retorno;
-
-        leer.nextLine();
+        
         System.out.println(">> Ingrese el Color del Vehiculo: ");
         color = leer.nextLine();
 
-        leer.nextLine();
+        leer.next();
         System.out.println(">> Ingrese la Marca del Vehiculo: ");
         marca = leer.nextLine();
 
-        leer.nextLine();
+        leer.next();
         System.out.println(">> Ingrese el Modelo del Vehiculo: ");
         modelo = leer.nextLine();
 
