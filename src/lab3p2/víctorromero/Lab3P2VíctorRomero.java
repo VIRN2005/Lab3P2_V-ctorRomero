@@ -447,15 +447,84 @@ public class Lab3P2VíctorRomero {
                 break;
 
                 case 4: { //Compra/Venta de vehículos por parte de un cliente
-                    concesionaria.
+                    System.out.println(">> MENU COMPRA / VENTA <<");
+                    System.out.println("----------------------- ");
+
+                    System.out.println("1 -> Compra");
+                    System.out.println("2 -> Venta");
+
+                    System.out.print("Ingrese su Opcion: ");
+                    int op = leer.nextInt();
+                    System.out.println("=> La Opcion escojida es: " + op);
+                    System.out.println(" ");
+
+                    switch (op) {
+
+                        case 1: { // Compra
+                            double venta1 = 0;
+                            double venta2 = 0;
+
+                            String chain = "";
+                            for (Object o : concesionaria) {
+                                if (o instanceof Concesionaria) {
+                                    chain += concesionaria.indexOf(o) + "- " + o + "\n";
+                                }
+                            }
+                            System.out.println(chain);
+
+                            System.out.println(">> Ingrese el Indice a Modificar");
+                            int pos = leer.nextInt();
+
+                            venta1 = vehiculos.get(pos).getPrecio();
+                            venta2 = vehiculos.get(pos).getPrecio() * 0.075;
+
+                            double Venta = venta1 + venta2;
+
+                            double moneyCliente = personas.get(pos).getSaldo();
+                            double moneyInc = concesionaria.get(pos).getSaldo();
+
+                            personas.get(pos).setSaldo(moneyCliente - Venta);
+                            personas.get(pos).getVehiculosProp().add(vehiculos.get(pos));
+
+                            concesionaria.get(pos).setSaldo(moneyInc + Venta);
+                            concesionaria.get(pos).getVehiculos().add(vehiculos.get(pos));
+
+                            System.out.println("EXCELENTE! COMPRA REALIZADA");
+                        }
+                        break;
+
+                        case 2: {
+                            String chain = "";
+                            for (Object o : concesionaria) {
+                                if (o instanceof Concesionaria) {
+                                    chain += concesionaria.indexOf(o) + "- " + o + "\n";
+                                }
+                            }
+                            System.out.println(chain);
+
+                            System.out.println(">> Ingrese el Indice a Modificar");
+                            int pos = leer.nextInt();
+                            
+                            double moneyCliente = personas.get(pos).getSaldo();
+                            double moneyInc = concesionaria.get(pos).getSaldo();
+                            
+                            
+                        }
+                    }
+
                 }
-                break;
+                while (opcion
+                        != 5);
+
             }
 
-        } while (opcion
-                != 5);
+    
 
-    }
+    
+
+    
+
+    
 
     static Concesionaria newCon() {
         String nombreEmpresa;
