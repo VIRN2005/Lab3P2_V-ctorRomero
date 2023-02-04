@@ -234,16 +234,16 @@ public class Lab3P2VíctorRomero {
                                                     ((Carro) vehiculos.get(pos)).setCantRuedas(wheels);
                                                 }
                                                 break;
-                                                
-                                                case 2:{
+
+                                                case 2: {
                                                     leer.nextLine();
                                                     System.out.println(">> Ingrese Motor: ");
                                                     String mot = leer.nextLine();
                                                     ((Carro) vehiculos.get(pos)).setMotor(mot);
                                                 }
                                                 break;
-                                                
-                                                case 3:{
+
+                                                case 3: {
                                                     System.out.println(">> Ingrese Velocidad Max: ");
                                                     int max = leer.nextInt();
                                                     ((Carro) vehiculos.get(pos)).setCantRuedas(max);
@@ -254,6 +254,163 @@ public class Lab3P2VíctorRomero {
                                         }
                                         break;
 
+                                        case 2: { // Camion Carga 
+                                            System.out.println(">> MENU CAMION <<");
+                                            System.out.println("----------------------- ");
+
+                                            System.out.println("1 -> Volumen Maximo");
+                                            System.out.println("2 -> Altura");
+                                            System.out.println("3 -> Excavadora");
+
+                                            System.out.print("Ingrese su Opcion: ");
+                                            int cam = leer.nextInt();
+                                            System.out.println("=> La Opcion escojida es: " + cam);
+                                            System.out.println(" ");
+
+                                            switch (cam) {
+                                                case 1: {
+                                                    System.out.println(">> Ingrese Volumen Max: ");
+                                                    int max = leer.nextInt();
+                                                    ((Camion) vehiculos.get(pos)).setVolumenMax(max);
+                                                }
+                                                break;
+
+                                                case 2: {
+                                                    System.out.println(">> Ingrese Altura: ");
+                                                    int max = leer.nextInt();
+                                                    ((Camion) vehiculos.get(pos)).setAltura(max);
+                                                }
+                                                break;
+
+                                                case 3: {
+                                                    System.out.println(">> Tiene Excavadora? (1> Si // 2> No) : ");
+                                                    int yesno = leer.nextInt();
+                                                    boolean ex = false;
+
+                                                    if (yesno == 1) {
+                                                        ex = true;
+                                                    }
+                                                    if (yesno == 2) {
+                                                        ex = false;
+                                                    }
+                                                    ((Camion) vehiculos.get(pos)).setExcavadora(ex);
+                                                }
+                                                break;
+                                            }
+                                        }
+                                        break;
+
+                                        case 3: { // Bus
+                                            System.out.println(">> MENU BUS <<");
+                                            System.out.println("----------------------- ");
+
+                                            System.out.println("1 -> Cant Pasajeros");
+
+                                            System.out.print("Ingrese su Opcion: ");
+                                            int cam = leer.nextInt();
+                                            System.out.println("=> La Opcion escojida es: " + cam);
+                                            System.out.println(" ");
+
+                                            switch (cam) {
+                                                case 1: {
+                                                    System.out.println(">> Ingrese Cant Pasajeros: ");
+                                                    int max = leer.nextInt();
+                                                    ((Bus) vehiculos.get(pos)).setCantPasajeros(max);
+                                                }
+                                                break;
+                                            }
+
+                                        }
+                                        break;
+
+                                        case 4: {
+                                            System.out.println(">> MENU MOTO <<");
+                                            System.out.println("----------------------- ");
+
+                                            System.out.println("1 -> Desp Motor");
+                                            System.out.println("2 -> Electric");
+
+                                            System.out.print("Ingrese su Opcion: ");
+                                            int cam = leer.nextInt();
+                                            System.out.println("=> La Opcion escojida es: " + cam);
+                                            System.out.println(" ");
+
+                                            switch (cam) {
+                                                case 1: {
+                                                    leer.nextLine();
+                                                    System.out.println(">> Desp Motor: ");
+                                                    String mot = leer.nextLine();
+                                                    ((Motocicleta) vehiculos.get(pos)).setDespMotor(mot);
+                                                }
+                                                break;
+
+                                                case 2: {
+                                                    System.out.println(">> Es electrica? (1> Si // 2> No) : ");
+                                                    int yesno = leer.nextInt();
+                                                    boolean ex = false;
+
+                                                    if (yesno == 1) {
+                                                        ex = true;
+                                                    }
+                                                    if (yesno == 2) {
+                                                        ex = false;
+                                                    }
+                                                    ((Motocicleta) vehiculos.get(pos)).setElectric(ex);
+                                                }
+
+                                                break;
+                                            }
+
+                                        }
+                                        break;
+
+                                        case 5: {
+                                            System.out.println(">> MENU BICI <<");
+                                            System.out.println("----------------------- ");
+
+                                            System.out.println("1 -> Descripcion");
+                                            System.out.println("2 -> Rueda");
+                                            System.out.println("3 -> BMX");
+
+                                            System.out.print("Ingrese su Opcion: ");
+                                            int cam = leer.nextInt();
+                                            System.out.println("=> La Opcion escojida es: " + cam);
+                                            System.out.println(" ");
+
+                                            switch (cam) {
+                                                case 1: {
+                                                    leer.nextLine();
+                                                    System.out.println(">> Desp Motor: ");
+                                                    String mot = leer.nextLine();
+                                                    ((Bicicleta) vehiculos.get(pos)).setDescripcion(mot);
+                                                }
+                                                break;
+
+                                                case 2: {
+                                                    System.out.println(">> Ingrese Cant Pasajeros: ");
+                                                    int max = leer.nextInt();
+                                                    ((Bicicleta) vehiculos.get(pos)).setCantLlantas(max);
+
+                                                }
+                                                break;
+
+                                                case 3: {
+                                                    System.out.println(">> Es BMX   ? (1> Si // 2> No) : ");
+                                                    int yesno = leer.nextInt();
+                                                    boolean ex = false;
+
+                                                    if (yesno == 1) {
+                                                        ex = true;
+                                                    }
+                                                    if (yesno == 2) {
+                                                        ex = false;
+                                                    }
+                                                    ((Motocicleta) vehiculos.get(pos)).setElectric(ex);
+                                                }
+                                                break;
+                                            }
+                                        }
+                                        break;
                                     }
 
                                 } else {
@@ -295,7 +452,8 @@ public class Lab3P2VíctorRomero {
                 break;
             }
 
-        } while (opcion != 5);
+        } while (opcion
+                != 5);
 
     }
 
