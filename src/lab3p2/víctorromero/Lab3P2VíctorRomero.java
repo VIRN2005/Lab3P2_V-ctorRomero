@@ -446,8 +446,8 @@ public class Lab3P2VíctorRomero {
                 }
                 break;
 
-                case 4: {
-
+                case 4: { //Compra/Venta de vehículos por parte de un cliente
+                    concesionaria.
                 }
                 break;
             }
